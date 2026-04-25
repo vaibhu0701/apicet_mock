@@ -15,8 +15,8 @@ const db = mysql.createPool({
 
 const promiseDb = db.promise();
 
-const HOST = "127.0.0.1";
-const PORT = Number(process.env.PORT || 3000);
+const HOST = "0.0.0.0";
+const PORT = process.env.PORT || 3000;
 const ROOT_DIR = __dirname;
 const DATA_DIR = path.join(ROOT_DIR, "data");
 const DB_PATH = path.join(DATA_DIR, "apicet.db");
@@ -341,6 +341,6 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, HOST, () => {
+server.listen(PORT, "0.0.0.0", () => {
   console.log(`AP ICET mock test server running at http://${HOST}:${PORT}`);
 });
