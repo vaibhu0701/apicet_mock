@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP ICET Mock Test - Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="analysis-page">
+  <div class="analysis-layout">
+    <aside class="analysis-sidebar">
+      <div class="side-icon active">⌂</div>
+      <div class="side-icon">≋</div>
+    </aside>
+
+    <main class="analysis-main">
+      <section class="analysis-hero">
+        <h1>Personalized AP ICET Analysis Report</h1>
+        <p id="analysisCandidate">Performance report for candidate</p>
+      </section>
+
+      <section class="stats-cards" id="statsCards"></section>
+
+      <section class="analysis-block">
+        <h2>Your attempt looked like this!</h2>
+        <p class="attempt-time">Time taken by you: <strong id="timeTakenLabel">00:00</strong></p>
+        <div class="mini-cards" id="miniCards"></div>
+      </section>
+
+      <section class="analysis-block">
+        <p class="accuracy-line">You attempted the test with <strong id="accuracyLabel">0%</strong> Accuracy</p>
+        <h2>Subject Wise Analysis</h2>
+        <div class="table-wrap">
+          <table class="analysis-table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Correct</th>
+                <th>Incorrect</th>
+                <th>Unattempted</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="subjectTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="analysis-block">
+        <h2>Score Analysis</h2>
+        <canvas id="scoreChart" width="1000" height="360" aria-label="Score Analysis Chart"></canvas>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP ICET Mock Test - Exam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="test-page">
+  <header class="exam-header">
+    <div>
+      <p class="exam-title">AP ICET Mock Test 2026</p>
+      <p class="exam-subtitle">3 sections | 200 marks | 150 minutes</p>
+    </div>
+    <div class="exam-meta">
+      <div class="timer-box">Time Left: <span id="timer">30:00</span></div>
+      <div class="profile-box">
+        <div class="avatar-circle" id="profileInitials">A</div>
+        <div>
+          <strong id="candidateName">Candidate</strong>
+          <p id="candidateEmail">candidate@example.com</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="exam-layout">
+    <section class="question-panel">
+      <div class="section-tabs" id="sectionTabs"></div>
+      <p class="section-meta-note">Analytical Ability: 75 | Mathematical Ability: 55 | Communication Ability: 70</p>
+
+      <article class="question-card">
+        <div class="question-head">
+          <h2 id="questionHeading">Question 1</h2>
+          <button class="ghost-icon-btn" id="jumpTopBtn" title="Scroll to top">↑</button>
+        </div>
+
+        <p class="question-section-name" id="questionSectionName"></p>
+        <p class="question-text" id="questionText"></p>
+        <div class="options-list" id="optionsList"></div>
+      </article>
+
+      <div class="action-row">
+        <button class="secondary-btn" id="markReviewBtn">Mark for Review &amp; Next</button>
+        <button class="ghost-btn" id="clearBtn">Clear Response</button>
+        <button class="primary-btn push-right" id="saveNextBtn">Save &amp; Next</button>
+      </div>
+    </section>
+
+    <aside class="palette-panel">
+      <div class="palette-summary">
+        <div class="summary-item">
+          <span class="status-chip answered"></span>
+          <strong id="answeredCount">0</strong>
+          <span>Answered</span>
+        </div>
+        <div class="summary-item">
+          <span class="status-chip review"></span>
+          <strong id="reviewCount">0</strong>
+          <span>Marked for review</span>
+        </div>
+        <div class="summary-item">
+          <span class="status-chip not-visited"></span>
+          <strong id="notVisitedCount">0</strong>
+          <span>Not Visited</span>
+        </div>
+        <div class="summary-item">
+          <span class="status-chip not-answered"></span>
+          <strong id="notAnsweredCount">0</strong>
+          <span>Not Answered</span>
+        </div>
+        <div class="summary-item full">
+          <span class="status-chip reviewed-answered"></span>
+          <strong id="reviewedAnsweredCount">0</strong>
+          <span>Answered &amp; Marked for Review</span>
+        </div>
+      </div>
+
+      <div class="palette-section">
+        <h3 id="paletteSectionTitle">Section</h3>
+        <div class="question-grid" id="questionPalette"></div>
+      </div>
+
+      <button class="primary-btn full-width" id="submitTestBtn">Submit</button>
+    </aside>
+  </main>
+
+  <div class="modal hidden" id="submitModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close">×</button>
+      <h3>Exam Summary</h3>
+      <div class="summary-table-wrap">
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>Section Name</th>
+              <th>No. of Questions</th>
+              <th>Answered</th>
+              <th>Not Answered</th>
+              <th>Marked for Review</th>
+              <th>Answered &amp; Marked for Review</th>
+              <th>Not Visited</th>
+            </tr>
+          </thead>
+          <tbody id="summaryTableBody"></tbody>
+        </table>
+      </div>
+      <div class="action-row center">
+        <button class="primary-btn" id="confirmSubmitBtn">Yes</button>
+        <button class="ghost-btn" id="cancelSubmitBtn">No</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
